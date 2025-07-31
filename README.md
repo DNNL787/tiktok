@@ -1,2 +1,63 @@
-# tiktok
-arabic site
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تحذير أمني - تحذير</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      padding: 50px;
+      direction: rtl;
+    }
+    h1 {
+      font-size: 3em;
+      color: red;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.5em;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    button {
+      background-color: red;
+      color: black;
+      font-size: 1.5em;
+      padding: 15px 30px;
+      border: none;
+      cursor: pointer;
+      margin-top: 40px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: darkred;
+    }
+  </style>
+  <script>
+    function fakeDownload() {
+      alert("تم اكتشاف فيروسات في الملف! تم إلغاء التنزيل للحفاظ على أمان جهازك.");
+    }
+    window.onload = function() {
+      var audio = document.getElementById('backgroundAudio');
+      audio.volume = 0.3; // Volume moderato ma abbastanza udibile
+      audio.play();
+    }
+  </script>
+</head>
+<body>
+  <audio id="backgroundAudio" autoplay loop>
+    <source src="https://upload.wikimedia.org/wikipedia/commons/7/77/Adhan_al-Maghrib_in_Medina_-_Saudi_Arabia.ogg" type="audio/ogg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <h1>تحذير أمني!</h1>
+  <p>تم اكتشاف نشاط غير طبيعي في النظام الخاص بك. يُرجى عدم تنزيل الملفات المشبوهة.</p>
+  <p>تنزيل الملف قد يؤدي إلى تلف جهازك.</p>
+  <button onclick="fakeDownload()">Download</button>
+</body>
+</html>
